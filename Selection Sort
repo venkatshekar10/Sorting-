@@ -1,0 +1,35 @@
+# When we want to reduce the cost of memory writes.
+# Basic idea of Heap Sort
+# unstable algo i.e the order of same elements may be changed.
+
+code....
+
+import java.util.*;
+public class codeforces{
+	
+	public static void SelectionSort(int a[],int n) {
+		for(int i=0;i<n;i++) {
+			int mini=a[i],idx=i;
+			for(int j=i+1;j<n;j++) {
+				if(a[j]<mini) {
+					mini=a[j];
+					idx=j;
+				}
+			}
+			int temp=a[i];
+			a[i]=mini;
+			a[idx]=temp;
+		}
+	}
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		int a[]= {12,3,4,1,7,5};
+		int n=a.length;
+		SelectionSort(a,n);
+		for(int i=0;i<n;i++) {
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+Complexity: O(n^2),O(1).
