@@ -1,0 +1,34 @@
+# when adjacent swaps are allowed
+# stable algorithm i.e Order of same elements will not be changed
+
+Code...
+
+
+
+import java.util.*;
+public class codeforces{
+	
+	public static void BubbleSort(int a[],int n) {
+		for(int i=0;i<n-1;i++) {
+			for(int j=0;j<n-1;j++) {
+				if(a[j+1]<a[j]) {
+					int temp=a[j];
+					a[j]=a[j+1];
+					a[j+1]=temp;
+				}
+			}
+		}
+	}
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		int a[]= {12,3,4,1,7,5};
+		int n=a.length;
+		BubbleSort(a,n);
+		for(int x:a) {
+			System.out.print(x+" ");
+		}
+	}
+}
+
+
+Complexity: O(n^2),O(1).
